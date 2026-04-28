@@ -1,0 +1,232 @@
+<section
+  id="como-funciona"
+  class="relative overflow-hidden bg-white px-6 py-20 md:py-28"
+>
+  <div
+    class="absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute -right-40 bottom-10 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl">
+    <div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+      <div>
+        <span
+          class="reveal inline-flex rounded-full bg-[#FBE8E2] px-4 py-2 font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
+        >
+          Cómo funciona
+        </span>
+
+        <h2
+          class="reveal delay-100 mt-5 font-['Plus_Jakarta_Sans'] text-3xl font-extrabold leading-tight tracking-[-0.03em] text-[#2C3E55] md:text-5xl"
+        >
+          Mejoramos tu presencia digital sin complicarte el negocio
+        </h2>
+      </div>
+
+      <p
+        class="reveal delay-200 font-['Inter'] text-base leading-8 text-[#2C3E55]/75 md:text-lg"
+      >
+        Revisamos dónde se están perdiendo oportunidades, ordenamos los canales
+        de contacto y ejecutamos mejoras visibles en pocos días para que más
+        clientes puedan encontrarte y reservar directamente.
+      </p>
+    </div>
+
+    <div class="mt-16 grid gap-5 md:grid-cols-4">
+      <article class="step-card reveal delay-100">
+        <span class="step-number">01</span>
+        <h3>Diagnosticamos</h3>
+        <p>
+          Revisamos tu web, Google, redes y canales de contacto para detectar
+          dónde se pierden clientes.
+        </p>
+      </article>
+
+      <article class="step-card reveal delay-200">
+        <span class="step-number">02</span>
+        <h3>Organizamos</h3>
+        <p>
+          Definimos una estructura clara para que el cliente entienda tu oferta,
+          vea confianza y sepa cómo contactarte.
+        </p>
+      </article>
+
+      <article class="step-card reveal delay-300">
+        <span class="step-number">03</span>
+        <h3>Implementamos</h3>
+        <p>
+          Creamos o mejoramos tu landing, botones de contacto, formulario, mapas
+          y flujo básico de reserva.
+        </p>
+      </article>
+
+      <article class="step-card reveal delay-400">
+        <span class="step-number">04</span>
+        <h3>Optimizamos</h3>
+        <p>
+          Ajustamos la solución para mejorar contacto, confianza y reservas
+          directas sin agregar complejidad innecesaria.
+        </p>
+      </article>
+    </div>
+
+    <div
+      class="reveal delay-300 mt-12 grid gap-5 rounded-[2rem] bg-[#F4F6FB] p-6 md:grid-cols-3 md:p-8"
+    >
+      <div class="mini-result">
+        <strong>WhatsApp visible</strong>
+        <span>Contacto directo desde la página.</span>
+      </div>
+
+      <div class="mini-result">
+        <strong>Información clara</strong>
+        <span>Menos dudas antes de reservar.</span>
+      </div>
+
+      <div class="mini-result">
+        <strong>Reserva sin fricción</strong>
+        <span>Menos dependencia de intermediarios.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .step-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    background: #f4f6fb;
+    padding: 28px;
+    border: 1px solid #e8edf5;
+    min-height: 280px;
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .step-card::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    background: rgba(42, 107, 181, 0.12);
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-8px);
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(27, 63, 110, 0.12);
+  }
+
+  .step-card:hover::after {
+    transform: scale(1.35);
+    background: rgba(232, 98, 58, 0.14);
+  }
+
+  .step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 46px;
+    border-radius: 16px;
+    background: #1b3f6e;
+    color: #ffffff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .step-card h3 {
+    margin-top: 24px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1b3f6e;
+    letter-spacing: -0.02em;
+  }
+
+  .step-card p {
+    margin-top: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(44, 62, 85, 0.74);
+  }
+
+  .mini-result {
+    border-radius: 1.5rem;
+    background: #ffffff;
+    padding: 22px;
+    border: 1px solid #e8edf5;
+  }
+
+  .mini-result strong {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    color: #1b3f6e;
+  }
+
+  .mini-result span {
+    display: block;
+    margin-top: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(44, 62, 85, 0.72);
+  }
+
+  .reveal {
+    animation: revealUp 0.8s ease both;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes revealUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .step-card {
+      animation: none;
+      transition: none;
+    }
+  }
+</style>

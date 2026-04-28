@@ -1,0 +1,207 @@
+<section
+  id="problema"
+  class="relative overflow-hidden bg-[#F4F6FB] px-6 py-20 md:py-28"
+>
+  <div
+    class="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute -left-40 bottom-10 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl"
+  >
+  </div>
+
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mx-auto max-w-3xl text-center">
+      <span
+        class="reveal inline-flex rounded-full bg-[#FBE8E2] px-4 py-2 font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
+      >
+        El problema
+      </span>
+
+      <h2
+        class="reveal delay-100 mt-5 font-['Plus_Jakarta_Sans'] text-3xl font-extrabold leading-tight tracking-[-0.03em] text-[#2C3E55] md:text-5xl"
+      >
+        Muchos alojamientos pierden reservas antes de recibir el primer mensaje
+      </h2>
+
+      <p
+        class="reveal delay-200 mt-5 font-['Inter'] text-base leading-8 text-[#2C3E55]/75 md:text-lg"
+      >
+        No siempre es falta de demanda. Muchas veces el cliente sí está
+        interesado, pero no encuentra información clara, no sabe cómo
+        contactarte o termina reservando por otro canal.
+      </p>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <article class="problem-card reveal delay-100">
+        <div class="problem-icon">01</div>
+        <h3>Información desordenada</h3>
+        <p>
+          Datos distintos en redes, Google o plataformas hacen que el cliente
+          dude antes de escribir o reservar.
+        </p>
+      </article>
+
+      <article class="problem-card reveal delay-200">
+        <div class="problem-icon">02</div>
+        <h3>Contacto poco visible</h3>
+        <p>
+          Si WhatsApp, llamada o reserva no están claros, cada clic extra puede
+          convertirse en una oportunidad perdida.
+        </p>
+      </article>
+
+      <article class="problem-card reveal delay-300">
+        <div class="problem-icon">03</div>
+        <h3>Dependencia de intermediarios</h3>
+        <p>
+          Cuando todo pasa por plataformas externas, el alojamiento pierde
+          control, margen y relación directa con el cliente.
+        </p>
+      </article>
+    </div>
+
+    <div
+      class="reveal delay-300 mt-10 rounded-[2rem] bg-[#1B3F6E] p-6 text-white shadow-2xl shadow-[#1B3F6E]/20 md:p-8"
+    >
+      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+        <div>
+          <p
+            class="font-['Plus_Jakarta_Sans'] text-xs font-bold uppercase tracking-[0.18em] text-[#FBE8E2]"
+          >
+            Lo importante
+          </p>
+
+          <h3
+            class="mt-3 font-['Plus_Jakarta_Sans'] text-2xl font-extrabold tracking-[-0.02em]"
+          >
+            El problema no es tener poca tecnología. Es perder clientes por
+            fricción.
+          </h3>
+        </div>
+
+        <a
+          href="#solucion"
+          class="inline-flex justify-center rounded-2xl bg-[#E8623A] px-6 py-4 font-['Plus_Jakarta_Sans'] text-sm font-bold text-white shadow-xl shadow-[#E8623A]/25 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E8623A]/35"
+        >
+          Ver solución
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .problem-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: 1px solid rgba(232, 237, 245, 0.9);
+    background: rgba(255, 255, 255, 0.78);
+    padding: 28px;
+    box-shadow: 0 18px 50px rgba(27, 63, 110, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      border-color 0.3s ease;
+  }
+
+  .problem-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(27, 63, 110, 0.08),
+      rgba(232, 98, 58, 0.08)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(232, 98, 58, 0.3);
+    box-shadow: 0 24px 70px rgba(27, 63, 110, 0.14);
+  }
+
+  .problem-card:hover::before {
+    opacity: 1;
+  }
+
+  .problem-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .problem-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 16px;
+    background: #fbe8e2;
+    color: #e8623a;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .problem-card h3 {
+    margin-top: 22px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1b3f6e;
+  }
+
+  .problem-card p {
+    margin-top: 12px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(44, 62, 85, 0.74);
+  }
+
+  .reveal {
+    animation: revealUp 0.8s ease both;
+  }
+
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes revealUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      animation: none;
+    }
+
+    .problem-card {
+      transition: none;
+    }
+  }
+</style>
