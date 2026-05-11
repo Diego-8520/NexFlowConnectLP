@@ -5,49 +5,82 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Problem from "../components/Problem.astro";
 import HowItWorks from "../components/HowItWorks.astro";
+import Benefits from "../components/Benefits.astro";
 import Plans from "../components/Plans.astro";
+import Differentiators from "../components/Differentiators.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import VercelMetrics from "../components/VercelMetrics.astro";
 ---
 
-<head>
-  <!-- Básico -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Título (enfocado en resultado) -->
-  <title>NexFlow Connect | Más reservas directas para tu alojamiento</title>
+    <title>NexFlow Connect | Más reservas directas para tu alojamiento</title>
 
-  <!-- Descripción (clave para conversión y SEO) -->
-  <meta
-    name="description"
-    content="Haz que tu alojamiento reciba más contactos y reservas directas. Organizamos tu presencia digital para que te encuentren fácil y te escriban sin fricción."
-  />
+    <meta
+      name="description"
+      content="Haz que tu alojamiento reciba más contactos y reservas directas. Organizamos tu presencia digital para que te encuentren fácil y te escriban sin fricción."
+    />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Open Graph (para compartir en WhatsApp, Facebook, etc.) -->
-  <meta property="og:title" content="NexFlow Connect" />
-  <meta
-    property="og:description"
-    content="Convierte tu presencia digital en más contactos y reservas directas."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:title" content="NexFlow Connect" />
+    <meta
+      property="og:description"
+      content="Convierte tu presencia digital en más contactos y reservas directas."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
 
-  <!-- Tema del navegador (coherente con tu marca) -->
-  <meta name="theme-color" content="#1B3F6E" />
-</head>
+    <meta name="theme-color" content="#1B3F6E" />
 
-<main class="min-h-screen bg-[#F4F6FB] text-[#2C3E55]">
-  <Navbar />
-  <Hero />
-  <Problem />
-  <HowItWorks />
-  <Plans />
-  <Contact />
-  <Footer />
-  <VercelMetrics />
-</main>
+    <!-- Fonts: preconnect for faster load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main class="min-h-screen bg-[#F4F6FB] text-[#2C3E55]">
+      <Navbar />
+      <Hero />
+      <Problem />
+      <HowItWorks />
+      <Benefits />
+      <Plans />
+      <Differentiators />
+      <Contact />
+      <Footer />
+      <VercelMetrics />
+    </main>
+
+    <!-- Scroll reveal: animates elements with [data-reveal] when they enter the viewport -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+          rootMargin: "0px 0px -48px 0px",
+        }
+      );
+
+      document.querySelectorAll("[data-reveal]").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

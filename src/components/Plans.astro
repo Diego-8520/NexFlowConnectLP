@@ -1,247 +1,278 @@
 <section
   id="planes"
-  class="relative overflow-hidden bg-[#F4F6FB] px-6 py-20 md:py-28"
+  class="relative overflow-hidden bg-white px-6 py-20 md:py-28"
 >
+  <!-- Ambient blobs -->
   <div
-    class="absolute -left-40 top-24 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl"
+    class="absolute -left-40 top-24 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl pointer-events-none"
   >
   </div>
   <div
-    class="absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl"
+    class="absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl pointer-events-none"
   >
   </div>
 
   <div class="relative mx-auto max-w-6xl">
+    <!-- Header -->
     <div class="mx-auto max-w-3xl text-center">
-      <span
-        class="reveal inline-flex rounded-full bg-[#FBE8E2] px-4 py-2 font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
-      >
-        Planes y precios
-      </span>
-
-      <h2
-        class="reveal delay-100 mt-5 font-['Plus_Jakarta_Sans'] text-3xl font-extrabold leading-tight tracking-[-0.03em] text-[#2C3E55] md:text-5xl"
-      >
+      <span class="plans-label" data-reveal>Planes y precios</span>
+      <h2 class="plans-title" data-reveal data-delay="100">
         Soluciones simples para mejorar contacto, confianza y reservas
       </h2>
-
-      <p
-        class="reveal delay-200 mt-5 font-['Inter'] text-base leading-8 text-[#2C3E55]/75 md:text-lg"
-      >
+      <p class="plans-sub" data-reveal data-delay="200">
         Elige el punto de partida según el estado actual de tu alojamiento.
-        Todos los planes están pensados para generar mejoras visibles sin
-        complicar la operación.
+        Todos los planes generan mejoras visibles sin complicar tu operación.
       </p>
     </div>
 
-    <div class="mt-14 grid gap-6 lg:grid-cols-3">
-      <!-- Plan 1 -->
-      <article class="plan-card reveal delay-100">
-        <span class="plan-label blue">Plan básico</span>
-
-        <h3>Presencia Digital</h3>
-
+    <!-- 3 plan cards -->
+    <div class="plans-grid">
+      <!-- Plan 1: Básico -->
+      <article class="plan-card" data-reveal data-delay="100">
+        <span class="plan-badge badge-blue">Plan básico</span>
+        <h3 class="plan-name">Presencia Digital</h3>
         <p class="plan-for">
-          Para alojamientos que no tienen web, tienen redes desordenadas o son
-          difíciles de contactar.
+          Para alojamientos sin web, con redes desordenadas o difíciles de
+          contactar.
         </p>
-
-        <div class="price">
-          $300 – $400 USD
-          <span>pago único</span>
+        <div class="plan-price">
+          $300 – $400
+          <span class="plan-currency">USD · pago único</span>
         </div>
-
-        <ul>
+        <ul class="plan-features">
           <li>Landing page profesional de 1 página</li>
           <li>Información clara del alojamiento</li>
           <li>Botón de WhatsApp directo</li>
           <li>Botón de llamada</li>
-          <li>Integración con Google Maps</li>
+          <li>Google Maps integrado</li>
           <li>Galería de imágenes</li>
           <li>Sección de servicios</li>
           <li>Enlace a reservas, si existe</li>
         </ul>
-
-        <div class="result">
-          Resultado: que el cliente pueda encontrarte y contactarte fácilmente.
+        <div class="plan-result">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          El cliente te encuentra y te contacta fácilmente.
         </div>
-
-        <a href="#contacto" class="plan-button">Solicitar diagnóstico</a>
+        <a href="#contacto" class="plan-cta">Solicitar diagnóstico</a>
       </article>
 
-      <!-- Plan 2 -->
-      <article class="plan-card featured reveal delay-200">
-        <div class="popular-badge">Recomendado</div>
-
-        <span class="plan-label coral">Plan comercial</span>
-
-        <h3>Optimización Comercial</h3>
-
+      <!-- Plan 2: Comercial (featured) -->
+      <article class="plan-card plan-featured" data-reveal data-delay="200">
+        <div class="featured-badge">Recomendado</div>
+        <span class="plan-badge badge-coral">Plan comercial</span>
+        <h3 class="plan-name">Optimización Comercial</h3>
         <p class="plan-for">
-          Para alojamientos que ya tienen web, pero no convierten bien o
-          dependen demasiado de intermediarios.
+          Para alojamientos con web que no convierte bien o que dependen
+          demasiado de intermediarios.
         </p>
-
-        <div class="price">
-          $600 – $800 USD
-          <span>pago único</span>
+        <div class="plan-price">
+          $600 – $800
+          <span class="plan-currency">USD · pago único</span>
         </div>
-
-        <ul>
-          <li>Todo lo del Plan Presencia Digital</li>
+        <ul class="plan-features">
+          <li>Todo lo del Plan Básico</li>
           <li>Mejora o rediseño de la web</li>
           <li>Optimización de botones de contacto</li>
-          <li>Formulario funcional de reserva/contacto</li>
+          <li>Formulario funcional de reserva</li>
           <li>Revisión de presencia en Google Maps</li>
           <li>Estructura enfocada en conversión</li>
           <li>Organización de canales de contacto</li>
           <li>Asesoría básica de mejora digital</li>
         </ul>
-
-        <div class="result">
-          Resultado: más contactos y más reservas directas.
+        <div class="plan-result">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Más contactos y más reservas directas.
         </div>
-
-        <a href="#contacto" class="plan-button">Quiero más reservas</a>
+        <a href="#contacto" class="plan-cta">Quiero más reservas</a>
       </article>
 
-      <!-- Plan 3 -->
-      <article class="plan-card dark reveal delay-300">
-        <span class="plan-label coral-light">Plan avanzado</span>
-
-        <h3>Sistema de Ventas</h3>
-
+      <!-- Plan 3: Avanzado -->
+      <article class="plan-card plan-dark" data-reveal data-delay="300">
+        <span class="plan-badge badge-light">Plan avanzado</span>
+        <h3 class="plan-name">Sistema de Ventas</h3>
         <p class="plan-for">
-          Para alojamientos que reciben consultas, pero pierden oportunidades
-          por falta de seguimiento.
+          Para alojamientos que reciben consultas pero pierden oportunidades por
+          falta de seguimiento.
         </p>
-
-        <div class="price">
-          $900 – $1200 USD
-          <span>pago único</span>
+        <div class="plan-price">
+          $900 – $1200
+          <span class="plan-currency">USD · pago único</span>
         </div>
-
-        <ul>
-          <li>Todo lo del Plan Optimización Comercial</li>
-          <li>Automatización de respuestas</li>
-          <li>Captura y organización de leads</li>
+        <ul class="plan-features">
+          <li>Todo lo del Plan Comercial</li>
+          <li>Respuestas rápidas para WhatsApp</li>
+          <li>Captura y organización de consultas</li>
           <li>Flujos básicos de seguimiento</li>
           <li>Integración con herramientas necesarias</li>
-          <li>Configuración de respuestas rápidas</li>
-          <li>Estructura simple tipo CRM</li>
+          <li>Respuestas automáticas configuradas</li>
+          <li>Estructura simple de seguimiento de clientes</li>
         </ul>
-
-        <div class="result">
-          Resultado: más reservas con menos esfuerzo operativo.
+        <div class="plan-result">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Más reservas con menos esfuerzo operativo.
         </div>
-
-        <a href="#contacto" class="plan-button">Empezar ahora</a>
+        <a href="#contacto" class="plan-cta">Organizar mis ventas</a>
       </article>
     </div>
 
-    <!-- Maintenance -->
+    <!-- Maintenance block -->
     <div
-      class="reveal delay-300 mt-8 grid gap-6 rounded-[2rem] border border-[#E8EDF5] bg-white p-6 shadow-xl shadow-[#1B3F6E]/5 md:grid-cols-[1fr_auto] md:items-center md:p-8"
+      class="maintenance-block"
+      data-reveal
+      data-delay="200"
     >
-      <div>
-        <span
-          class="font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
-        >
-          Soporte continuo
-        </span>
-
-        <h3
-          class="mt-2 font-['Plus_Jakarta_Sans'] text-2xl font-extrabold tracking-[-0.02em] text-[#1B3F6E]"
-        >
-          Mantenimiento y soporte
-        </h3>
-
-        <p
-          class="mt-3 max-w-3xl font-['Inter'] text-sm leading-7 text-[#2C3E55]/75"
-        >
-          Actualización de contenido, soporte técnico, ajustes en la web,
-          mejoras continuas, revisión de funcionamiento y acompañamiento.
-        </p>
+      <div class="maintenance-left">
+        <div class="maintenance-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <span class="maintenance-label">Soporte continuo</span>
+          <h3 class="maintenance-name">Mantenimiento y soporte</h3>
+          <p class="maintenance-desc">
+            Actualización de contenido, soporte técnico, ajustes en la web, mejoras
+            continuas y acompañamiento para que la solución funcione mejor con el tiempo.
+          </p>
+        </div>
       </div>
-
-      <div class="rounded-2xl bg-[#FBE8E2] px-6 py-5 text-center">
-        <p
-          class="font-['Plus_Jakarta_Sans'] text-2xl font-extrabold text-[#E8623A]"
-        >
-          $50 – $100 USD
-        </p>
-        <span class="font-['Inter'] text-sm font-semibold text-[#2C3E55]/70">
-          mensual
-        </span>
+      <div class="maintenance-price">
+        <span class="maintenance-amount">$50 – $100</span>
+        <span class="maintenance-period">USD / mes</span>
       </div>
     </div>
 
-    <p
-      class="reveal delay-300 mx-auto mt-8 max-w-3xl text-center font-['Inter'] text-sm leading-7 text-[#2C3E55]/65"
-    >
-      Nota: cada plan tiene un alcance definido. Lo que no esté incluido se
-      cotiza como adicional para proteger tiempos, calidad y resultados.
+    <!-- Fine print -->
+    <p class="plans-note" data-reveal data-delay="100">
+      Cada plan tiene un alcance definido. Lo que no está incluido se cotiza como
+      adicional para garantizar calidad, tiempos y resultados.
     </p>
   </div>
 </section>
 
 <style>
+  .plans-label {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #fbe8e2;
+    padding: 8px 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #e8623a;
+  }
+
+  .plans-title {
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #2c3e55;
+  }
+
+  .plans-sub {
+    margin-top: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(44, 62, 85, 0.72);
+  }
+
+  /* ── Grid ── */
+  .plans-grid {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .plans-grid {
+      grid-template-columns: 1fr;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  /* ── Plan card base ── */
   .plan-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: 2rem;
+    border-radius: 28px;
     border: 1px solid #e8edf5;
-    background: rgba(255, 255, 255, 0.86);
-    padding: 28px;
-    box-shadow: 0 20px 60px rgba(27, 63, 110, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 32px 28px;
+    box-shadow: 0 12px 40px rgba(27, 63, 110, 0.07);
     transition:
-      transform 0.3s ease,
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.3s ease,
       border-color 0.3s ease;
   }
 
   .plan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 70px rgba(27, 63, 110, 0.13);
+    border-color: rgba(232, 98, 58, 0.3);
+  }
+
+  /* Featured card: elevated */
+  .plan-featured {
+    border: 2px solid rgba(232, 98, 58, 0.5);
     transform: translateY(-8px);
-    border-color: rgba(232, 98, 58, 0.35);
-    box-shadow: 0 28px 80px rgba(27, 63, 110, 0.14);
+    box-shadow: 0 20px 64px rgba(27, 63, 110, 0.12);
   }
 
-  .plan-card.featured {
-    border: 2px solid rgba(232, 98, 58, 0.45);
-    transform: translateY(-10px);
+  .plan-featured:hover {
+    transform: translateY(-14px);
   }
 
-  .plan-card.featured:hover {
-    transform: translateY(-16px);
-  }
-
-  .plan-card.dark {
+  /* Dark card */
+  .plan-dark {
     background: #1b3f6e;
-    border-color: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.14);
     color: white;
   }
 
-  .popular-badge {
+  .plan-dark:hover {
+    border-color: rgba(232, 98, 58, 0.5);
+  }
+
+  /* ── Featured badge ── */
+  .featured-badge {
     position: absolute;
+    top: -14px;
     right: 24px;
-    top: -16px;
-    border-radius: 999px;
     background: #e8623a;
-    padding: 9px 14px;
+    border-radius: 999px;
+    padding: 7px 16px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 11px;
     font-weight: 800;
-    color: white;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    box-shadow: 0 12px 28px rgba(232, 98, 58, 0.28);
+    color: white;
+    box-shadow: 0 8px 24px rgba(232, 98, 58, 0.32);
   }
 
-  .plan-label {
+  /* ── Plan badges ── */
+  .plan-badge {
+    display: inline-flex;
     width: fit-content;
     border-radius: 999px;
-    padding: 8px 12px;
+    padding: 7px 14px;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 11px;
     font-weight: 800;
@@ -249,133 +280,160 @@
     letter-spacing: 0.14em;
   }
 
-  .plan-label.blue {
+  .badge-blue {
     background: #e8edf5;
     color: #2a6bb5;
   }
 
-  .plan-label.coral {
+  .badge-coral {
     background: #fbe8e2;
     color: #e8623a;
   }
 
-  .plan-label.coral-light {
-    background: rgba(251, 232, 226, 0.14);
+  .badge-light {
+    background: rgba(255, 255, 255, 0.14);
     color: #fbe8e2;
   }
 
-  .plan-card h3 {
-    margin-top: 22px;
+  /* ── Plan name ── */
+  .plan-name {
+    margin-top: 20px;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 800;
     letter-spacing: -0.03em;
     color: #1b3f6e;
+    line-height: 1.15;
   }
 
-  .plan-card.dark h3 {
+  .plan-dark .plan-name {
     color: white;
   }
 
+  /* ── Plan for ── */
   .plan-for {
-    margin-top: 12px;
+    margin-top: 10px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
     line-height: 1.7;
-    color: rgba(44, 62, 85, 0.72);
+    color: rgba(44, 62, 85, 0.7);
   }
 
-  .plan-card.dark .plan-for {
-    color: rgba(255, 255, 255, 0.76);
+  .plan-dark .plan-for {
+    color: rgba(255, 255, 255, 0.72);
   }
 
-  .price {
-    margin-top: 24px;
+  /* ── Price ── */
+  .plan-price {
+    margin-top: 22px;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     color: #1b3f6e;
+    line-height: 1;
   }
 
-  .plan-card.dark .price {
+  .plan-dark .plan-price {
     color: white;
   }
 
-  .price span {
+  .plan-currency {
     display: block;
-    margin-top: 4px;
+    margin-top: 6px;
     font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(44, 62, 85, 0.62);
+    font-size: 12.5px;
+    font-weight: 500;
+    color: rgba(44, 62, 85, 0.58);
+    letter-spacing: 0;
   }
 
-  .plan-card.dark .price span {
-    color: rgba(255, 255, 255, 0.64);
+  .plan-dark .plan-currency {
+    color: rgba(255, 255, 255, 0.6);
   }
 
-  .plan-card ul {
-    margin: 26px 0 0;
+  /* ── Features list ── */
+  .plan-features {
+    margin: 24px 0 0;
     padding: 0;
     list-style: none;
     display: grid;
-    gap: 12px;
+    gap: 11px;
   }
 
-  .plan-card li {
+  .plan-features li {
     position: relative;
-    padding-left: 28px;
+    padding-left: 26px;
     font-family: "Inter", sans-serif;
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 1.55;
     color: rgba(44, 62, 85, 0.76);
   }
 
-  .plan-card.dark li {
+  .plan-dark .plan-features li {
     color: rgba(255, 255, 255, 0.78);
   }
 
-  .plan-card li::before {
+  .plan-features li::before {
     content: "✓";
     position: absolute;
     left: 0;
-    top: 0;
+    top: 1px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 19px;
-    height: 19px;
-    border-radius: 999px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
     background: #fbe8e2;
     color: #e8623a;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
   }
 
-  .result {
-    margin-top: auto;
-    margin-top: 26px;
-    border-radius: 1.4rem;
+  .plan-dark .plan-features li::before {
+    background: rgba(232, 98, 58, 0.2);
+    color: #fbe8e2;
+  }
+
+  /* ── Result box ── */
+  .plan-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 22px;
+    border-radius: 14px;
     background: #f4f6fb;
-    padding: 16px;
+    padding: 14px 16px;
     font-family: "Inter", sans-serif;
     font-size: 13px;
-    font-weight: 700;
-    line-height: 1.55;
+    font-weight: 600;
+    line-height: 1.5;
     color: #1b3f6e;
   }
 
-  .plan-card.dark .result {
+  .plan-result svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #e8623a;
+  }
+
+  .plan-dark .plan-result {
     background: rgba(255, 255, 255, 0.1);
     color: white;
   }
 
-  .plan-button {
+  .plan-dark .plan-result svg {
+    color: #fbe8e2;
+  }
+
+  /* ── CTA button ── */
+  .plan-cta {
     margin-top: 18px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    border-radius: 1rem;
+    align-items: center;
+    border-radius: 14px;
     background: #e8623a;
     padding: 15px 20px;
     font-family: "Plus Jakarta Sans", sans-serif;
@@ -383,61 +441,145 @@
     font-weight: 800;
     color: white;
     text-decoration: none;
-    box-shadow: 0 14px 30px rgba(232, 98, 58, 0.24);
+    letter-spacing: 0.01em;
+    box-shadow: 0 10px 28px rgba(232, 98, 58, 0.24);
     transition:
       transform 0.25s ease,
-      box-shadow 0.25s ease;
+      box-shadow 0.25s ease,
+      background 0.2s ease;
   }
 
-  .plan-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 40px rgba(232, 98, 58, 0.34);
+  .plan-cta:hover {
+    background: #d4552f;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(232, 98, 58, 0.36);
   }
 
-  .reveal {
-    animation: revealUp 0.8s ease both;
+  /* ── Maintenance block ── */
+  .maintenance-block {
+    margin-top: 28px;
+    border-radius: 24px;
+    border: 1px solid #e8edf5;
+    background: white;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    box-shadow: 0 8px 32px rgba(27, 63, 110, 0.06);
+    flex-wrap: wrap;
   }
 
-  .delay-100 {
-    animation-delay: 0.1s;
+  .maintenance-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    flex: 1;
+    min-width: 0;
   }
 
-  .delay-200 {
-    animation-delay: 0.2s;
+  .maintenance-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: #e8edf5;
+    color: #2a6bb5;
   }
 
-  .delay-300 {
-    animation-delay: 0.3s;
+  .maintenance-label {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #e8623a;
+    margin-bottom: 6px;
   }
 
-  @keyframes revealUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .maintenance-name {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1b3f6e;
+    margin: 0 0 8px;
   }
 
-  @media (max-width: 1024px) {
-    .plan-card.featured {
+  .maintenance-desc {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(44, 62, 85, 0.7);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  .maintenance-price {
+    flex-shrink: 0;
+    border-radius: 18px;
+    background: #fbe8e2;
+    padding: 18px 24px;
+    text-align: center;
+  }
+
+  .maintenance-amount {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #e8623a;
+  }
+
+  .maintenance-period {
+    display: block;
+    margin-top: 4px;
+    font-family: "Inter", sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgba(44, 62, 85, 0.65);
+  }
+
+  /* ── Fine print ── */
+  .plans-note {
+    margin-top: 24px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: rgba(44, 62, 85, 0.6);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .plan-featured {
       transform: none;
     }
 
-    .plan-card.featured:hover {
-      transform: translateY(-8px);
+    .plan-featured:hover {
+      transform: translateY(-6px);
     }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    .plan-card,
-    .plan-button {
-      animation: none;
-      transition: none;
+  @media (max-width: 640px) {
+    .maintenance-block {
+      padding: 22px 20px;
+    }
+
+    .maintenance-left {
+      flex-direction: column;
+    }
+
+    .maintenance-price {
+      width: 100%;
     }
   }
 </style>

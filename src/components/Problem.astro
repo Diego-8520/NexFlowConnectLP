@@ -2,91 +2,152 @@
   id="problema"
   class="relative overflow-hidden bg-[#F4F6FB] px-6 py-20 md:py-28"
 >
+  <!-- Ambient blobs -->
   <div
-    class="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl"
+    class="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl pointer-events-none"
   >
   </div>
   <div
-    class="absolute -left-40 bottom-10 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl"
+    class="absolute -left-40 bottom-10 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl pointer-events-none"
   >
   </div>
 
   <div class="relative mx-auto max-w-6xl">
+    <!-- Section header -->
     <div class="mx-auto max-w-3xl text-center">
       <span
-        class="reveal inline-flex rounded-full bg-[#FBE8E2] px-4 py-2 font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
+        class="problem-label"
+        data-reveal
       >
         El problema
       </span>
 
       <h2
-        class="reveal delay-100 mt-5 font-['Plus_Jakarta_Sans'] text-3xl font-extrabold leading-tight tracking-[-0.03em] text-[#2C3E55] md:text-5xl"
+        class="section-title"
+        data-reveal
+        data-delay="100"
       >
-        Muchos alojamientos pierden reservas antes de recibir el primer mensaje
+        Tu alojamiento puede estar perdiendo reservas por detalles simples
       </h2>
 
       <p
-        class="reveal delay-200 mt-5 font-['Inter'] text-base leading-8 text-[#2C3E55]/75 md:text-lg"
+        class="section-sub"
+        data-reveal
+        data-delay="200"
       >
         No siempre es falta de demanda. Muchas veces el cliente sí está
-        interesado, pero no encuentra información clara, no sabe cómo
-        contactarte o termina reservando por otro canal.
+        interesado, pero no encuentra información clara, no sabe cómo contactarte
+        o termina reservando por otro canal.
       </p>
     </div>
 
-    <div class="mt-14 grid gap-5 md:grid-cols-3">
-      <article class="problem-card reveal delay-100">
-        <div class="problem-icon">01</div>
-        <h3>Información desordenada</h3>
+    <!-- 6 problem cards -->
+    <div class="problems-grid">
+      <article class="problem-card" data-reveal data-delay="100">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Sin página web propia</h3>
         <p>
-          Datos distintos en redes, Google o plataformas hacen que el cliente
-          dude antes de escribir o reservar.
+          Sin presencia digital clara, el cliente no puede conocerte antes de
+          decidir. Termina eligiendo a quien sí tiene web.
         </p>
       </article>
 
-      <article class="problem-card reveal delay-200">
-        <div class="problem-icon">02</div>
-        <h3>Contacto poco visible</h3>
+      <article class="problem-card" data-reveal data-delay="150">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Información desactualizada</h3>
         <p>
-          Si WhatsApp, llamada o reserva no están claros, cada clic extra puede
-          convertirse en una oportunidad perdida.
+          Precios distintos en redes, Google y plataformas generan desconfianza.
+          El cliente duda y no escribe.
         </p>
       </article>
 
-      <article class="problem-card reveal delay-300">
-        <div class="problem-icon">03</div>
-        <h3>Dependencia de intermediarios</h3>
+      <article class="problem-card" data-reveal data-delay="200">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.67 2.18 2 2 0 012.65 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.97-.97a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Difícil de contactar</h3>
         <p>
-          Cuando todo pasa por plataformas externas, el alojamiento pierde
-          control, margen y relación directa con el cliente.
+          Número de WhatsApp enterrado, sin botón directo, sin formulario.
+          Cada paso extra que el cliente da, es una reserva perdida.
+        </p>
+      </article>
+
+      <article class="problem-card" data-reveal data-delay="100">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+            <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3>Sin canal claro de reserva</h3>
+        <p>
+          El cliente quiere reservar pero no sabe cómo. Sin un paso claro,
+          abandona y reserva en otro lugar.
+        </p>
+      </article>
+
+      <article class="problem-card" data-reveal data-delay="150">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Dependencia de OTAs</h3>
+        <p>
+          Booking y Expedia se llevan entre 15% y 25% de cada reserva. Cada
+          reserva por plataforma es margen que pierdes.
+        </p>
+      </article>
+
+      <article class="problem-card" data-reveal data-delay="200">
+        <div class="p-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Consultas sin respuesta rápida</h3>
+        <p>
+          Recibes preguntas pero tarda horas en llegar la respuesta. El cliente
+          no espera y elige quien responde primero.
         </p>
       </article>
     </div>
 
+    <!-- Insight banner -->
     <div
-      class="reveal delay-300 mt-10 rounded-[2rem] bg-[#1B3F6E] p-6 text-white shadow-2xl shadow-[#1B3F6E]/20 md:p-8"
+      class="insight-banner"
+      data-reveal
+      data-delay="200"
     >
-      <div class="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+      <div class="insight-inner">
         <div>
-          <p
-            class="font-['Plus_Jakarta_Sans'] text-xs font-bold uppercase tracking-[0.18em] text-[#FBE8E2]"
-          >
-            Lo importante
-          </p>
-
-          <h3
-            class="mt-3 font-['Plus_Jakarta_Sans'] text-2xl font-extrabold tracking-[-0.02em]"
-          >
-            El problema no es tener poca tecnología. Es perder clientes por
-            fricción.
+          <p class="insight-label">Lo importante</p>
+          <h3 class="insight-headline">
+            El problema no es tecnología. Es fricción.<br />
+            <span class="insight-sub">Cada dificultad para contactarte es una reserva que no llega.</span>
           </h3>
         </div>
-
-        <a
-          href="#solucion"
-          class="inline-flex justify-center rounded-2xl bg-[#E8623A] px-6 py-4 font-['Plus_Jakarta_Sans'] text-sm font-bold text-white shadow-xl shadow-[#E8623A]/25 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E8623A]/35"
-        >
+        <a href="#solucion" class="insight-cta">
           Ver solución
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
       </div>
     </div>
@@ -94,16 +155,68 @@
 </section>
 
 <style>
+  /* ── Section labels & titles ── */
+  .problem-label {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #fbe8e2;
+    padding: 8px 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #e8623a;
+  }
+
+  .section-title {
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #2c3e55;
+  }
+
+  .section-sub {
+    margin-top: 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(44, 62, 85, 0.72);
+  }
+
+  /* ── Problem cards grid ── */
+  .problems-grid {
+    margin-top: 52px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    .problems-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .problems-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .problem-card {
     position: relative;
     overflow: hidden;
-    border-radius: 2rem;
+    border-radius: 24px;
     border: 1px solid rgba(232, 237, 245, 0.9);
     background: rgba(255, 255, 255, 0.78);
     padding: 28px;
-    box-shadow: 0 18px 50px rgba(27, 63, 110, 0.08);
+    box-shadow: 0 12px 36px rgba(27, 63, 110, 0.07);
     transition:
-      transform 0.3s ease,
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.3s ease,
       border-color 0.3s ease;
   }
@@ -114,17 +227,17 @@
     inset: 0;
     background: linear-gradient(
       135deg,
-      rgba(27, 63, 110, 0.08),
-      rgba(232, 98, 58, 0.08)
+      rgba(27, 63, 110, 0.06),
+      rgba(232, 98, 58, 0.06)
     );
     opacity: 0;
     transition: opacity 0.3s ease;
   }
 
   .problem-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(232, 98, 58, 0.3);
-    box-shadow: 0 24px 70px rgba(27, 63, 110, 0.14);
+    transform: translateY(-6px);
+    border-color: rgba(232, 98, 58, 0.28);
+    box-shadow: 0 22px 60px rgba(27, 63, 110, 0.13);
   }
 
   .problem-card:hover::before {
@@ -136,72 +249,116 @@
     z-index: 1;
   }
 
-  .problem-icon {
+  /* ── Problem icon ── */
+  .p-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
     width: 44px;
-    border-radius: 16px;
+    height: 44px;
+    border-radius: 14px;
     background: #fbe8e2;
     color: #e8623a;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 800;
   }
 
   .problem-card h3 {
-    margin-top: 22px;
+    margin-top: 18px;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
     letter-spacing: -0.02em;
     color: #1b3f6e;
   }
 
   .problem-card p {
-    margin-top: 12px;
+    margin-top: 10px;
     font-family: "Inter", sans-serif;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.7;
-    color: rgba(44, 62, 85, 0.74);
+    color: rgba(44, 62, 85, 0.72);
   }
 
-  .reveal {
-    animation: revealUp 0.8s ease both;
+  /* ── Insight banner ── */
+  .insight-banner {
+    margin-top: 40px;
+    border-radius: 28px;
+    background: #1b3f6e;
+    padding: 32px 36px;
+    box-shadow:
+      0 24px 64px rgba(27, 63, 110, 0.22),
+      0 8px 24px rgba(27, 63, 110, 0.14);
   }
 
-  .delay-100 {
-    animation-delay: 0.1s;
+  .insight-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
   }
 
-  .delay-200 {
-    animation-delay: 0.2s;
+  .insight-label {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #fbe8e2;
+    margin: 0 0 10px;
   }
 
-  .delay-300 {
-    animation-delay: 0.3s;
+  .insight-headline {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: white;
+    line-height: 1.25;
+    margin: 0;
   }
 
-  @keyframes revealUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
+  .insight-sub {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    letter-spacing: 0;
+  }
+
+  .insight-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 14px 24px;
+    border-radius: 14px;
+    background: #e8623a;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 10px 28px rgba(232, 98, 58, 0.28);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      background 0.2s ease;
+  }
+
+  .insight-cta:hover {
+    background: #d4552f;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(232, 98, 58, 0.38);
+  }
+
+  @media (max-width: 640px) {
+    .insight-banner {
+      padding: 24px 20px;
     }
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .reveal {
-      animation: none;
-    }
-
-    .problem-card {
-      transition: none;
+    .insight-cta {
+      width: 100%;
+      justify-content: center;
     }
   }
 </style>

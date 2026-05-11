@@ -1,3 +1,6 @@
+/* ── Fonts: must come before all other rules ── */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
+
 @import "tailwindcss";
 
 html {
@@ -6,8 +9,8 @@ html {
 
 body {
   margin: 0;
-  background: #F4F6FB;
-  color: #2C3E55;
+  background: #f4f6fb;
+  color: #2c3e55;
   font-family: "Inter", sans-serif;
 }
 
@@ -15,38 +18,78 @@ body.menu-open {
   overflow: hidden;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
+/* ════════════════════════════════════
+   SCROLL REVEAL SYSTEM
+   Elements start hidden, animate in
+   when they enter the viewport via
+   IntersectionObserver in index.astro
+════════════════════════════════════ */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal][data-delay="100"].is-visible {
+  transition-delay: 0.1s;
+}
+
+[data-reveal][data-delay="150"].is-visible {
+  transition-delay: 0.15s;
+}
+
+[data-reveal][data-delay="200"].is-visible {
+  transition-delay: 0.2s;
+}
+
+[data-reveal][data-delay="300"].is-visible {
+  transition-delay: 0.3s;
+}
+
+[data-reveal][data-delay="400"].is-visible {
+  transition-delay: 0.4s;
+}
+
+[data-reveal][data-delay="500"].is-visible {
+  transition-delay: 0.5s;
+}
+
+/* Scale variant for badges/pills */
+[data-reveal="scale"] {
+  opacity: 0;
+  transform: scale(0.92) translateY(12px);
+}
+
+[data-reveal="scale"].is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="scale"] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-.reveal {
-  animation: fadeUp 0.8s ease-out both;
-}
-
-.delay-100 {
-  animation-delay: 0.1s;
-}
-
-.delay-200 {
-  animation-delay: 0.2s;
-}
-
-.delay-300 {
-  animation-delay: 0.3s;
-}
-
+/* ── Card hover utility ── */
 .card-hover {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-hover:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(27, 63, 110, 0.12);
+  box-shadow: 0 20px 48px rgba(27, 63, 110, 0.13);
 }

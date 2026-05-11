@@ -6,11 +6,13 @@ import WhatsAppMockup from "./WhatsAppMockup.astro";
   id="inicio"
   class="relative isolate overflow-hidden bg-[#1B3F6E] px-6 pb-20 pt-36 text-white sm:pt-40 md:pb-28 md:pt-44"
 >
+  <!-- Gradient: used ONLY here as per brand rules -->
   <div
     class="absolute inset-0 -z-10 bg-[linear-gradient(135deg,#1B3F6E,#2A6BB5,#E8623A)]"
   >
   </div>
 
+  <!-- Ambient blobs -->
   <div
     class="absolute -right-32 -top-32 -z-10 h-96 w-96 rounded-full bg-white/15 blur-3xl animate-pulse"
   >
@@ -19,146 +21,291 @@ import WhatsAppMockup from "./WhatsAppMockup.astro";
     class="absolute bottom-0 left-0 -z-10 h-72 w-72 rounded-full bg-[#E8623A]/30 blur-3xl"
   >
   </div>
-
   <div
-    class="absolute inset-0 -z-10 opacity-[0.08] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:48px_48px]"
+    class="absolute left-1/2 top-1/4 -z-10 h-64 w-64 -translate-x-1/2 rounded-full bg-white/5 blur-3xl"
+  >
+  </div>
+
+  <!-- Grid overlay -->
+  <div
+    class="absolute inset-0 -z-10 opacity-[0.06] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-size-[48px_48px]"
   >
   </div>
 
   <div
     class="mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-[1.08fr_0.92fr]"
   >
+    <!-- Left: copy -->
     <div>
-      <div
-        class="reveal inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#FBE8E2] backdrop-blur"
-      >
-        Para hostales, ecohabs y alojamientos
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Para hostales, ecohabs y alojamientos pequeños
       </div>
 
-      <h1
-        class="reveal delay-100 mt-6 max-w-4xl font-['Plus_Jakarta_Sans'] text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] sm:text-5xl md:text-6xl"
-      >
+      <h1 class="hero-title">
         Convierte más visitas en
-        <span class="text-[#FBE8E2]">reservas directas</span>
+        <span class="hero-title-accent">reservas directas</span>
       </h1>
 
-      <p
-        class="reveal delay-200 mt-6 max-w-2xl font-['Inter'] text-base leading-8 text-white/85 sm:text-lg"
-      >
-        Organizamos tu presencia digital para que tus clientes te encuentren
-        fácil, te contacten rápido y reserven sin fricción.
+      <p class="hero-subtitle">
+        Organizamos tu presencia digital para que los clientes te encuentren
+        fácil, te contacten rápido y reserven sin depender tanto de plataformas
+        externas.
       </p>
 
-      <div class="reveal delay-300 mt-8 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="#planes"
-          class="inline-flex justify-center rounded-2xl bg-[#E8623A] px-6 py-4 font-['Plus_Jakarta_Sans'] text-sm font-bold text-white shadow-xl shadow-[#E8623A]/25 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#E8623A]/35"
-        >
-          Ver planes
+      <div class="hero-actions">
+        <a href="#contacto" class="btn-primary">
+          Quiero más reservas directas
         </a>
-
-        <a
-          href="#contacto"
-          class="inline-flex justify-center rounded-2xl border border-white/30 bg-white/10 px-6 py-4 font-['Plus_Jakarta_Sans'] text-sm font-bold text-white backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/15"
-        >
-          Agenda un diagnóstico
-        </a>
+        <a href="#planes" class="btn-ghost"> Ver planes →</a>
       </div>
 
-      <div
-        class="reveal delay-300 mt-8 grid max-w-xl gap-3 font-['Inter'] text-sm text-white/80 sm:grid-cols-3"
-      >
-        <div
-          class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/15"
-        >
-          <strong class="block text-white">Contacto claro</strong>
-          WhatsApp visible
+      <!-- Trust strips -->
+      <div class="trust-grid">
+        <div class="trust-item">
+          <strong>Resultados en días</strong>
+          <span>No en semanas</span>
         </div>
-
-        <div
-          class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/15"
-        >
-          <strong class="block text-white">Más confianza</strong>
-          Web profesional
+        <div class="trust-item">
+          <strong>Sin tecnicismos</strong>
+          <span>Hablas con personas</span>
         </div>
-
-        <div
-          class="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur transition duration-300 hover:-translate-y-1 hover:bg-white/15"
-        >
-          <strong class="block text-white">Menos fricción</strong>
-          Reserva directa
+        <div class="trust-item">
+          <strong>WhatsApp directo</strong>
+          <span>Contacto inmediato</span>
         </div>
       </div>
     </div>
 
+    <!-- Right: mockup -->
     <WhatsAppMockup />
   </div>
 </section>
 
 <style>
-  .reveal {
-    animation: revealUp 0.8s ease both;
+  /* ── Hero label badge ── */
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #fbe8e2;
+    animation: revealDown 0.6s ease 0.05s both;
   }
 
-  .delay-100 {
-    animation-delay: 0.1s;
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #e8623a;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(232, 98, 58, 0.3);
+    animation: pulseDot 2.4s ease-in-out infinite;
   }
 
-  .delay-200 {
-    animation-delay: 0.2s;
+  /* ── Hero title ── */
+  .hero-title {
+    margin-top: 24px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(38px, 5.5vw, 62px);
+    font-weight: 800;
+    line-height: 1.04;
+    letter-spacing: -0.03em;
+    color: white;
+    animation: revealUp 0.75s ease 0.12s both;
   }
 
-  .delay-300 {
-    animation-delay: 0.3s;
+  .hero-title-accent {
+    display: block;
+    color: #fbe8e2;
   }
 
-  .hero-card {
-    animation: floatCard 5.5s ease-in-out infinite;
+  /* ── Hero subtitle ── */
+  .hero-subtitle {
+    margin-top: 22px;
+    max-width: 520px;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.84);
+    animation: revealUp 0.75s ease 0.24s both;
   }
 
-  .floating-badge {
-    animation: floatBadge 4.5s ease-in-out infinite;
+  /* ── CTA buttons ── */
+  .hero-actions {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    animation: revealUp 0.75s ease 0.36s both;
   }
 
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 28px;
+    border-radius: 14px;
+    background: #e8623a;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow:
+      0 14px 32px rgba(232, 98, 58, 0.32),
+      0 4px 8px rgba(232, 98, 58, 0.2);
+    transition:
+      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      background 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background: #d4552f;
+    transform: translateY(-2px);
+    box-shadow:
+      0 20px 44px rgba(232, 98, 58, 0.42),
+      0 8px 16px rgba(232, 98, 58, 0.24);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.42);
+    transform: translateY(-2px);
+  }
+
+  /* ── Trust grid ── */
+  .trust-grid {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    animation: revealUp 0.75s ease 0.48s both;
+  }
+
+  .trust-item {
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition:
+      background 0.2s ease,
+      transform 0.22s ease;
+  }
+
+  .trust-item:hover {
+    background: rgba(255, 255, 255, 0.14);
+    transform: translateY(-2px);
+  }
+
+  .trust-item strong {
+    display: block;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.01em;
+  }
+
+  .trust-item span {
+    display: block;
+    margin-top: 3px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  /* ── Keyframes (hero fires immediately, no scroll needed) ── */
   @keyframes revealUp {
     from {
       opacity: 0;
-      transform: translateY(18px);
+      transform: translateY(20px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
 
-  @keyframes floatCard {
-    0%,
-    100% {
-      transform: translateY(0);
+  @keyframes revealDown {
+    from {
+      opacity: 0;
+      transform: translateY(-12px);
     }
-
-    50% {
-      transform: translateY(-10px);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  @keyframes floatBadge {
+  @keyframes pulseDot {
     0%,
     100% {
-      transform: translateY(0) rotate(-1deg);
+      box-shadow: 0 0 0 3px rgba(232, 98, 58, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 0 7px rgba(232, 98, 58, 0.08);
+    }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .trust-grid {
+      grid-template-columns: 1fr;
     }
 
-    50% {
-      transform: translateY(-8px) rotate(1deg);
+    .hero-actions {
+      flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      width: 100%;
+      justify-content: center;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    .hero-card,
-    .floating-badge {
+    .hero-badge,
+    .hero-title,
+    .hero-subtitle,
+    .hero-actions,
+    .trust-grid,
+    .badge-dot {
       animation: none;
+      opacity: 1;
     }
   }
 </style>

@@ -2,110 +2,233 @@
   id="solucion"
   class="relative overflow-hidden bg-white px-6 py-20 md:py-28"
 >
+  <!-- Ambient blobs -->
   <div
-    class="absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl"
+    class="absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#E8EDF5] blur-3xl pointer-events-none"
   >
   </div>
   <div
-    class="absolute -right-40 bottom-10 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl"
+    class="absolute -right-40 bottom-10 h-80 w-80 rounded-full bg-[#FBE8E2] blur-3xl pointer-events-none"
   >
   </div>
 
   <div class="relative mx-auto max-w-6xl">
-    <div class="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+    <!-- Header -->
+    <div class="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
       <div>
-        <span
-          class="reveal inline-flex rounded-full bg-[#FBE8E2] px-4 py-2 font-['Plus_Jakarta_Sans'] text-[11px] font-bold uppercase tracking-[0.18em] text-[#E8623A]"
-        >
-          Cómo funciona
-        </span>
-
-        <h2
-          class="reveal delay-100 mt-5 font-['Plus_Jakarta_Sans'] text-3xl font-extrabold leading-tight tracking-[-0.03em] text-[#2C3E55] md:text-5xl"
-        >
-          Mejoramos tu presencia digital sin complicarte el negocio
+        <span class="section-label" data-reveal>Cómo funciona</span>
+        <h2 class="section-title" data-reveal data-delay="100">
+          Ordenamos tu presencia digital para que vender sea más fácil
         </h2>
       </div>
-
-      <p
-        class="reveal delay-200 font-['Inter'] text-base leading-8 text-[#2C3E55]/75 md:text-lg"
-      >
-        Revisamos dónde se están perdiendo oportunidades, ordenamos los canales
-        de contacto y ejecutamos mejoras visibles en pocos días para que más
+      <p class="section-sub" data-reveal data-delay="200">
+        Revisamos dónde se pierden oportunidades, organizamos los canales de
+        contacto y ejecutamos mejoras visibles en pocos días para que más
         clientes puedan encontrarte y reservar directamente.
       </p>
     </div>
 
-    <div class="mt-16 grid gap-5 md:grid-cols-4">
-      <article class="step-card reveal delay-100">
+    <!-- 4-step process -->
+    <div class="steps-grid">
+      <article class="step-card" data-reveal data-delay="100">
         <span class="step-number">01</span>
         <h3>Diagnosticamos</h3>
         <p>
-          Revisamos tu web, Google, redes y canales de contacto para detectar
-          dónde se pierden clientes.
+          Revisamos tu web, Google Maps, redes y canales de contacto para
+          detectar exactamente dónde se pierden clientes.
         </p>
+        <div class="step-arrow" aria-hidden="true">→</div>
       </article>
 
-      <article class="step-card reveal delay-200">
+      <article class="step-card" data-reveal data-delay="200">
         <span class="step-number">02</span>
         <h3>Organizamos</h3>
         <p>
           Definimos una estructura clara para que el cliente entienda tu oferta,
-          vea confianza y sepa cómo contactarte.
+          sienta confianza y sepa cómo contactarte de inmediato.
         </p>
+        <div class="step-arrow" aria-hidden="true">→</div>
       </article>
 
-      <article class="step-card reveal delay-300">
+      <article class="step-card" data-reveal data-delay="300">
         <span class="step-number">03</span>
         <h3>Implementamos</h3>
         <p>
-          Creamos o mejoramos tu landing, botones de contacto, formulario, mapas
-          y flujo básico de reserva.
+          Creamos o mejoramos tu landing, botón de WhatsApp, formulario de
+          contacto, Google Maps y flujo de reserva directa.
         </p>
+        <div class="step-arrow" aria-hidden="true">→</div>
       </article>
 
-      <article class="step-card reveal delay-400">
+      <article class="step-card" data-reveal data-delay="400">
         <span class="step-number">04</span>
         <h3>Optimizamos</h3>
         <p>
-          Ajustamos la solución para mejorar contacto, confianza y reservas
-          directas sin agregar complejidad innecesaria.
+          Ajustamos lo necesario para que la solución funcione mejor cada
+          semana: más contactos, más confianza, más reservas.
         </p>
       </article>
     </div>
 
-    <div
-      class="reveal delay-300 mt-12 grid gap-5 rounded-[2rem] bg-[#F4F6FB] p-6 md:grid-cols-3 md:p-8"
-    >
-      <div class="mini-result">
-        <strong>WhatsApp visible</strong>
-        <span>Contacto directo desde la página.</span>
+    <!-- What we build: feature list -->
+    <div class="features-block" data-reveal data-delay="100">
+      <p class="features-label">Qué incluye cada solución</p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Landing page profesional
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M17.5 14.4a7.5 7.5 0 10-10.9 0l5.45 5.45 5.45-5.45z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="10" r="2" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          Google Maps integrado
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.67 2.18 2 2 0 012.65 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.97-.97a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Botón de WhatsApp directo
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 10.8 19.79 19.79 0 01.67 2.18 2 2 0 012.65 0h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l.97-.97a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="23" y1="1" x2="1" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Botón de llamada
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Formulario de reserva o contacto
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+            <path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Galería de imágenes
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Respuestas rápidas configuradas
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Seguimiento de consultas
+        </div>
       </div>
+    </div>
 
-      <div class="mini-result">
-        <strong>Información clara</strong>
-        <span>Menos dudas antes de reservar.</span>
+    <!-- Result pills -->
+    <div class="results-strip" data-reveal data-delay="200">
+      <div class="result-pill">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        WhatsApp visible siempre
       </div>
-
-      <div class="mini-result">
-        <strong>Reserva sin fricción</strong>
-        <span>Menos dependencia de intermediarios.</span>
+      <div class="result-pill">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Información clara y confiable
+      </div>
+      <div class="result-pill">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Reserva sin fricción
+      </div>
+      <div class="result-pill">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+          <polyline points="20 6 9 17 4 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Menos dependencia de OTAs
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .section-label {
+    display: inline-flex;
+    border-radius: 999px;
+    background: #fbe8e2;
+    padding: 8px 18px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #e8623a;
+  }
+
+  .section-title {
+    margin-top: 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(26px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: #2c3e55;
+  }
+
+  .section-sub {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color: rgba(44, 62, 85, 0.72);
+  }
+
+  @media (max-width: 768px) {
+    .section-sub {
+      margin-top: 0;
+    }
+  }
+
+  /* ── Steps grid ── */
+  .steps-grid {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 1024px) {
+    .steps-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   .step-card {
     position: relative;
     overflow: hidden;
-    border-radius: 2rem;
+    border-radius: 24px;
     background: #f4f6fb;
-    padding: 28px;
     border: 1px solid #e8edf5;
-    min-height: 280px;
+    padding: 28px 24px;
+    min-height: 260px;
     transition:
-      transform 0.3s ease,
+      transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
       background 0.3s ease,
       box-shadow 0.3s ease;
   }
@@ -113,120 +236,175 @@
   .step-card::after {
     content: "";
     position: absolute;
-    right: -40px;
-    bottom: -40px;
-    width: 120px;
-    height: 120px;
-    border-radius: 999px;
-    background: rgba(42, 107, 181, 0.12);
+    right: -36px;
+    bottom: -36px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(42, 107, 181, 0.1);
     transition:
-      transform 0.3s ease,
+      transform 0.35s ease,
       background 0.3s ease;
   }
 
   .step-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
     background: #ffffff;
-    box-shadow: 0 24px 70px rgba(27, 63, 110, 0.12);
+    box-shadow: 0 20px 56px rgba(27, 63, 110, 0.11);
   }
 
   .step-card:hover::after {
-    transform: scale(1.35);
-    background: rgba(232, 98, 58, 0.14);
+    transform: scale(1.4);
+    background: rgba(232, 98, 58, 0.12);
+  }
+
+  .step-card > * {
+    position: relative;
+    z-index: 1;
   }
 
   .step-number {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 46px;
-    width: 46px;
-    border-radius: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
     background: #1b3f6e;
-    color: #ffffff;
+    color: white;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 13px;
     font-weight: 800;
+    letter-spacing: 0.04em;
   }
 
   .step-card h3 {
-    margin-top: 24px;
+    margin-top: 22px;
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 800;
     color: #1b3f6e;
     letter-spacing: -0.02em;
   }
 
   .step-card p {
-    margin-top: 12px;
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    color: rgba(44, 62, 85, 0.74);
-  }
-
-  .mini-result {
-    border-radius: 1.5rem;
-    background: #ffffff;
-    padding: 22px;
-    border: 1px solid #e8edf5;
-  }
-
-  .mini-result strong {
-    display: block;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 17px;
-    font-weight: 800;
-    color: #1b3f6e;
-  }
-
-  .mini-result span {
-    display: block;
-    margin-top: 8px;
+    margin-top: 10px;
     font-family: "Inter", sans-serif;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: rgba(44, 62, 85, 0.72);
   }
 
-  .reveal {
-    animation: revealUp 0.8s ease both;
+  .step-arrow {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    font-size: 22px;
+    color: rgba(42, 107, 181, 0.3);
+    font-weight: 300;
+    pointer-events: none;
+    transition: color 0.3s ease;
   }
 
-  .delay-100 {
-    animation-delay: 0.1s;
+  .step-card:hover .step-arrow {
+    color: rgba(232, 98, 58, 0.5);
   }
 
-  .delay-200 {
-    animation-delay: 0.2s;
+  /* ── Features block ── */
+  .features-block {
+    margin-top: 40px;
+    border-radius: 24px;
+    background: #f4f6fb;
+    border: 1px solid #e8edf5;
+    padding: 28px 32px;
   }
 
-  .delay-300 {
-    animation-delay: 0.3s;
+  .features-label {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #2a6bb5;
+    margin: 0 0 20px;
   }
 
-  .delay-400 {
-    animation-delay: 0.4s;
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
   }
 
-  @keyframes revealUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
+  @media (max-width: 900px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .features-grid {
+      grid-template-columns: 1fr;
     }
 
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .features-block {
+      padding: 22px 20px;
     }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .reveal,
-    .step-card {
-      animation: none;
-      transition: none;
-    }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #e8edf5;
+    padding: 13px 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #2c3e55;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .feature-item:hover {
+    border-color: rgba(232, 98, 58, 0.3);
+    box-shadow: 0 4px 16px rgba(27, 63, 110, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .feature-icon {
+    flex-shrink: 0;
+    color: #2a6bb5;
+  }
+
+  /* ── Results strip ── */
+  .results-strip {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .result-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 999px;
+    background: white;
+    border: 1px solid #e8edf5;
+    padding: 10px 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1b3f6e;
+    box-shadow: 0 2px 8px rgba(27, 63, 110, 0.06);
+  }
+
+  .result-pill svg {
+    color: #e8623a;
+    flex-shrink: 0;
   }
 </style>
